@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn1").css("backgroundColor","teal")
+                $("#btn2").css({"backgroundColor":"red","color":"white"})
+                $("#btn1").click(function(){
+                    var t1=Number($("#txt1").val());
+                    var t2=Number($("#txt2").val());
+                    var res=t1+t2;
+                    $("#sp").text("Addition is:"+res).css("color","blue");
+                })
+                $("#btn2").click(function(){
+                    var t1=Number($("#txt1").val());
+                    var t2=Number($("#txt2").val());
+                    var res=t1-t2;
+                    $("#sp").text("Substraction is:"+res).css("color","red");;
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter 1 Number" id="txt1"/>
+        <br>
+        <br>
+        <input type="text" placeholder="Enter 2 Number" id="txt2"/>
+        <br>
+        <br>
+        <input type="button" value="+" id="btn1"/>
+        <input type="button" value="-" id="btn2"/>
+        <input type="button" value="*" id="btn3"/>
+        <input type="button" value="/" id="btn4"/>
+        <input type="button" value="C" id="btn5"/>
+        <br>
+        <span id="sp"></span>
+    </body>
+</html>
